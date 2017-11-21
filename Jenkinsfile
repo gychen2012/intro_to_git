@@ -8,13 +8,13 @@ pipeline {
   stages {
     stage('write_to_file') {
       steps {
-        writeFile(file: 'test', text: 'abcdefg', encoding: 'UTF-8')
-        pwd()
+        echo 'Please provide VC and ESX build #. ${vc_build}'
+        sh 'echo "This is the first test'
       }
     }
   }
   environment {
-    vc_build = ''
-    esxi_build = ''
+    vc_build = 'this is the vc build'
+    esxi_build = 'this is esxi build'
   }
 }
