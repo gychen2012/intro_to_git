@@ -9,6 +9,7 @@ pipeline {
     stage('write_to_file') {
       steps {
         writeFile(file: 'test', text: 'abcdefg', encoding: 'UTF-8')
+        pwd()
       }
     }
   }
