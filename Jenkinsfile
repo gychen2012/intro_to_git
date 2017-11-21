@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('write_to_file') {
       steps {
-        echo 'Please provide VC and ESX build #. ${vc_build}'
+        echo 'Please provide VC and ESX build ${vc_build}. '
         sh 'echo "This is the first test'
       }
     }
